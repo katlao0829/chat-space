@@ -1,3 +1,13 @@
 .Sidebar
-  .Sidebar__user-name
-  .Sidebar__group-list
+  .Sidebar__user--name
+    .Sidebar__user--name__top--items
+      %p.top--items__name masa
+      %ul.top--items__icon
+        %li
+        = link_to "#", class: "top--items__icon--btn" do
+          = icon('fas', 'edit', class: "icon--btn__create")
+        %li
+        = link_to "#", class: "top--items__icon--btn" do
+          = icon('fas', 'cog', class: "icon--btn__edit")
+
+  .Sidebar__group--list

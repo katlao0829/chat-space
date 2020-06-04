@@ -8,11 +8,36 @@
     width: 300px;
     height: 100vh;
     background-color: #253141;
-    &__user-name{
+    &__user--name{
       height: 100px;
       background-color: #253141;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__top--items{
+        height: 20px;
+        width: 260px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        p.top--items__name{
+          font-size: 16px;
+        }
+        ul.top--items__icon{
+          width: 60px;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          list-style: none;
+          .top--items__icon--btn{
+            margin-left: 5px;
+            text-decoration: none;
+            color: #ffffff;
+          }
+        }
+      }
     }
-    &__group-list{
+    &__group--list{
       height: calc(100% - 100px);
       background-color: #2f3e51;
     }
@@ -21,16 +46,16 @@
     width: calc(100vw - 300px);
     height: 100vh;
     background-color: #ffffff;
-    &__group-info{
+    &__group--info{
       height: 100px;
       background-color: #ffffff;
       border: 1px solid #eeeeee;
     }
-    &__message-list{
+    &__message--list{
       height: calc(100% - 100px - 90px);
       background-color: #fafafa;
     }
-    &__message_form{
+    &__message--form{
       height: 90px;
       background-color: #d2d2d2;
     }
