@@ -1,0 +1,27 @@
+.Mainchat
+  .Mainchat__GroupInfo
+    .Mainchat__GroupInfo__Group
+      %p.Groupname Test
+      .Mainchat__GroupInfo__Group__GroupMember
+        %p.Member Member：
+        %ul.MemberList
+          %li masa
+          %li hoge
+    .Mainchat__GroupInfo__Edit
+      = link_to "Edit", "#", class: "Edit--btn" 
+
+  .Mainchat__MessageList
+    .Mainchat__MessageList__Chat
+      .Mainchat__MessageList__Chat__User
+        %p.Username masa
+        %p.Timestamp 2020/6/5(Fri) 10:00:00
+      %p.Chatmessage おはよう！
+
+  .Mainchat__MessageForm
+    %form.TextArea
+      %input.message{type: "text", placeholder: "type a message"}
+      %label{class: "message--image"}
+        = icon('fas', 'image')
+        %input{type: "file", class: "input--image"}
+    .Mainchat__MessageForm__Send
+      = link_to "Send", "#", class: "send--btn" 

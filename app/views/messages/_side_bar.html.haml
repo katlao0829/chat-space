@@ -1,0 +1,19 @@
+.Sidebar
+  .Sidebar__User
+    .Sidebar__User__TopItems
+      %p.name masa
+      %ul.icon
+        %li
+        = link_to "#", class: "icon--btn" do
+          = icon('fas', 'edit', class: "icon--btn--create")
+        %li
+        = link_to "#", class: "icon--btn" do
+          = icon('fas', 'cog', class: "icon--btn--edit")
+
+  .Sidebar__GroupList
+    .Sidebar__GroupList__Chat
+      %p.name techcamp
+      %p.message まだメッセージがありません
+    .Sidebar__GroupList__Chat
+      %p.name techcamp
+      %p.message まだメッセージがありません
