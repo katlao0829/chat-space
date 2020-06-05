@@ -8,28 +8,30 @@
     width: 300px;
     height: 100vh;
     background-color: #253141;
-    &__user--name{
+    &__UserName{
       height: 100px;
       background-color: #253141;
       display: flex;
       justify-content: center;
       align-items: center;
-      &__top--items{
+      &__TopItems{
         height: 20px;
-        width: 260px;
+        width: 100%;
+        padding: 0px 20px;
         color: white;
         display: flex;
         justify-content: space-between;
-        p.top--items__name{
+        p.TopItems__name{
           font-size: 16px;
+          font-weight: bold;
         }
-        ul.top--items__icon{
+        ul.TopItems__icon{
           width: 60px;
           display: flex;
           justify-content: flex-end;
           align-items: center;
           list-style: none;
-          .top--items__icon--btn{
+          .TopItems__icon--btn{
             margin-left: 5px;
             text-decoration: none;
             color: #ffffff;
@@ -37,9 +39,21 @@
         }
       }
     }
-    &__group--list{
+    &__GroupList{
       height: calc(100% - 100px);
       background-color: #2f3e51;
+      color: #ffffff;
+      font-weight: bold;
+      padding: 0 20px;
+      &__GroupChat{
+        padding: 20px 0 40px 0;
+        p.GroupChat--name{
+          font-size: 15px;
+        }
+        p.GroupChat--message{
+          font-size: 11px;
+        }
+      }
     }
   }
   .Mainchat{
