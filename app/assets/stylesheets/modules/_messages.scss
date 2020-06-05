@@ -1,24 +1,19 @@
+@import "variables";
+
 * {
   box-sizing: border-box;
 }
-
-@mixin userfont{
-  font-size: 16px;
-  font-weight: bold;
-}
-
-$basecolor: #ffffff;  
 
 .wrapper{
   display: flex;
 
   .Sidebar{
     width: 300px;
-    color: $basecolor;
+    color: $basewhite;
     font-weight: bold;
     &__User{
       height: 100px;
-      background-color: #253141;
+      background-color: $side-user;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -40,14 +35,14 @@ $basecolor: #ffffff;
           a.icon--btn{
             margin-left: 5px;
             text-decoration: none;
-            color: $basecolor;
+            color: $basewhite;
           }
         }
       }
     }
     &__GroupList{
       height: calc(100% - 100px);
-      background-color: #2f3e51;
+      background-color: $side-grouplist;
       padding: 0 20px;
       &__Chat{
         padding: 20px 0 40px 0;
@@ -65,22 +60,22 @@ $basecolor: #ffffff;
   .Mainchat{
     width: calc(100vw - 300px);
     height: 100vh;
-    background-color: $basecolor;
+    background-color: $basewhite;
     &__GroupInfo{
       height: 100px;
-      background-color: $basecolor;
-      border: 1px solid #eeeeee;
+      background-color: $basewhite;
+      border: 1px solid $main-border-groupinfo;
       display: flex;
       justify-content: space-between;
       &__Group{
         padding: 35px 0 0 40px;
         p.Groupname{
-          color: #333333;
+          color: $baseblack;
           font-size: 20px;
           margin-bottom: 15px;
         }
         &__GroupMember{
-          color: #999999;
+          color: $basegray;
           font-size: 12px;
           display: flex;
           p.Member{
@@ -104,8 +99,8 @@ $basecolor: #ffffff;
           line-height: 40px;
           font-size: 16px;
           padding: 0px 20px;
-          color: #38aef0;
-          border: 1px solid #38aef0; 
+          color: $btn-color;
+          border: 1px solid $btn-color; 
           text-decoration: none;
           display: block;
         }
@@ -113,31 +108,31 @@ $basecolor: #ffffff;
     }
     &__MessageList{
       height: calc(100% - 100px - 90px);
-      background-color: #fafafa;
+      background-color: $main-background;
       &__Chat{
         padding: 35px 0 46px 40px;
         &__User{
           display: flex;
           margin-bottom: 12px; 
           p.Username{
-            color: #333333;
+            color: $baseblack;
             @include userfont;
           }
           p.Timestamp{
-            color: #999999;
+            color: $basegray;
             font-size: 12px;
             padding-left: 10px; 
           }
         }
         p.Chatmessage{
-          color: #434A54;
+          color: $main-chatmessage;
           font-size: 14px;
         }
       }
     }
     &__MessageForm{
       height: 90px;
-      background-color: #d2d2d2;
+      background-color: $form-background;
       padding: 20px 50px 20px 40px;
       display: flex;
       form.TextArea{
@@ -150,7 +145,7 @@ $basecolor: #ffffff;
           height: 100%;
           width: 100%;
           padding: 0 45px 0 15px;
-          color: $basecolor;
+          color: $basewhite;
           border-style: none;
           display: block;
         }
@@ -169,12 +164,12 @@ $basecolor: #ffffff;
         font-size: 16px;
         height: 50px;
         line-height: 50px;
-        background-color: #38AEF0;
+        background-color: $btn-color;
         border: none;
         margin-left: 15px;
         padding: 0 30px;
         a.send--btn{
-          color: $basecolor;
+          color: $basewhite;
           text-decoration: none;
         }
       }
