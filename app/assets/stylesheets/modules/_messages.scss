@@ -7,12 +7,14 @@
   font-weight: bold;
 }
 
+$basecolor: #ffffff;  
+
 .wrapper{
   display: flex;
 
   .Sidebar{
     width: 300px;
-    color: #ffffff;
+    color: $basecolor;
     font-weight: bold;
     &__User{
       height: 100px;
@@ -38,7 +40,7 @@
           a.icon--btn{
             margin-left: 5px;
             text-decoration: none;
-            color: #ffffff;
+            color: $basecolor;
           }
         }
       }
@@ -63,10 +65,10 @@
   .Mainchat{
     width: calc(100vw - 300px);
     height: 100vh;
-    background-color: #ffffff;
+    background-color: $basecolor;
     &__GroupInfo{
       height: 100px;
-      background-color: #ffffff;
+      background-color: $basecolor;
       border: 1px solid #eeeeee;
       display: flex;
       justify-content: space-between;
@@ -148,7 +150,7 @@
           height: 100%;
           width: 100%;
           padding: 0 45px 0 15px;
-          color: #ffffff;
+          color: $basecolor;
           border-style: none;
           display: block;
         }
@@ -172,7 +174,7 @@
         margin-left: 15px;
         padding: 0 30px;
         a.send--btn{
-          color: #ffffff;
+          color: $basecolor;
           text-decoration: none;
         }
       }
