@@ -18,3 +18,11 @@
       %p.Chat--message おはよう！
 
   .Mainchat__MessageForm
+    %form.MessageForm__TextArea
+      %input.TextArea__message{type: "text", placeholder: "type a message"}
+      %label{class: "TextArea__image"}
+        = icon('fas', 'image')
+        %input{type: "file", class: "input--image"}
+
+    .Mainchat__MessageForm__Send
+      = link_to "Send", "#", class: "Send--btn"

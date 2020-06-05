@@ -4,12 +4,12 @@
 
 .wrapper{
   display: flex;
-  
+
   .Sidebar{
     width: 300px;
-    height: 100vh;
-    background-color: #253141;
-    &__UserName{
+    color: #ffffff;
+    font-weight: bold;
+    &__User{
       height: 100px;
       background-color: #253141;
       display: flex;
@@ -19,20 +19,19 @@
         height: 20px;
         width: 100%;
         padding: 0px 20px;
-        color: white;
         display: flex;
         justify-content: space-between;
-        p.TopItems__name{
+        p.name{
           font-size: 16px;
           font-weight: bold;
         }
-        ul.TopItems__icon{
+        ul.icon{
           width: 60px;
           display: flex;
           justify-content: flex-end;
           align-items: center;
           list-style: none;
-          .TopItems__icon--btn{
+          a.icon--btn{
             margin-left: 5px;
             text-decoration: none;
             color: #ffffff;
@@ -43,15 +42,15 @@
     &__GroupList{
       height: calc(100% - 100px);
       background-color: #2f3e51;
-      color: #ffffff;
-      font-weight: bold;
+      // font-weight: bold;
       padding: 0 20px;
-      &__GroupChat{
+      &__Chat{
         padding: 20px 0 40px 0;
-        p.GroupChat--name{
+        p.name{
           font-size: 15px;
+          margin-bottom: 5px;
         }
-        p.GroupChat--message{
+        p.message{
           font-size: 11px;
         }
       }
@@ -133,6 +132,46 @@
     &__MessageForm{
       height: 90px;
       background-color: #d2d2d2;
+      padding: 20px 50px 20px 40px;
+      display: flex;
+      form.MessageForm__TextArea{
+        border: none;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        position: relative;
+        input.TextArea__message{
+          height: 100%;
+          width: 100%;
+          padding: 0 45px 0 15px;
+          color: #ffffff;
+          border-style: none;
+          display: block;
+        }
+        label.TextArea__image{
+          line-height: 50px;
+          font-size: 25px;
+          display: block;
+          position: absolute;
+          right: 10px;
+          input.input--image{
+            display: none;
+          }
+        }
+      }
+      &__Send{
+        font-size: 16px;
+        height: 50px;
+        line-height: 50px;
+        background-color: #38AEF0;
+        border: none;
+        margin-left: 15px;
+        padding: 0 30px;
+        a.Send--btn{
+          color: #ffffff;
+          text-decoration: none;
+        }
+      }
     }
   }
 }

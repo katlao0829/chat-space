@@ -1,19 +1,19 @@
 .Sidebar
-  .Sidebar__UserName
-    .Sidebar__UserName__TopItems
-      %p.TopItems__name masa
-      %ul.TopItems__icon
+  .Sidebar__User
+    .Sidebar__User__TopItems
+      %p.name masa
+      %ul.icon
         %li
-        = link_to "#", class: "TopItems__icon--btn" do
+        = link_to "#", class: "icon--btn" do
           = icon('fas', 'edit', class: "icon--btn--create")
         %li
-        = link_to "#", class: "TopItems__icon--btn" do
+        = link_to "#", class: "icon--btn" do
           = icon('fas', 'cog', class: "icon--btn--edit")
 
   .Sidebar__GroupList
-    .Sidebar__GroupList__GroupChat
-      %p.GroupChat--name techcamp
-      %p.GroupChat--message まだメッセージがありません
-    .Sidebar__GroupList__GroupChat
-      %p.GroupChat--name techcamp
-      %p.GroupChat--message まだメッセージがありません
+    .Sidebar__GroupList__Chat
+      %p.name techcamp
+      %p.message まだメッセージがありません
+    .Sidebar__GroupList__Chat
+      %p.name techcamp
+      %p.message まだメッセージがありません
