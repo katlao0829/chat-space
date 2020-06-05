@@ -60,16 +60,56 @@
     width: calc(100vw - 300px);
     height: 100vh;
     background-color: #ffffff;
-    &__group--info{
+    &__GroupInfo{
       height: 100px;
       background-color: #ffffff;
       border: 1px solid #eeeeee;
+      display: flex;
+      justify-content: space-between;
+      &__Group{
+        padding: 35px 0 0 40px;
+        p.Group__name{
+          color: #333333;
+          font-size: 20px;
+          margin-bottom: 15px;
+        }
+        &__GroupMember{
+          display: flex;
+          color: #999999;
+          font-size: 12px;
+          p.GroupMember__Member{
+          }
+          ul.GroupMember__List{
+            display: flex;
+            list-style: none;
+            li{
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+      &__Edit{
+        padding: 28px 40px 0 0;
+        a.Edit--btn{
+          display: block;
+          width: 72px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 16px;
+          padding: 0px 20px;
+          color: #38aef0;
+          border: 1px solid #38aef0; 
+          text-decoration: none;
+        }
+      }
+      
+
     }
-    &__message--list{
+    &__MessageList{
       height: calc(100% - 100px - 90px);
       background-color: #fafafa;
     }
-    &__message--form{
+    &__MessageForm{
       height: 90px;
       background-color: #d2d2d2;
     }

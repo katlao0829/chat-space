@@ -1,4 +1,14 @@
 .Mainchat
-  .Mainchat__group--info
-  .Mainchat__message--list
-  .Mainchat__message--form
+  .Mainchat__GroupInfo
+    .Mainchat__GroupInfo__Group
+      %p.Group__name Test
+      .Mainchat__GroupInfo__Group__GroupMember
+        %p.GroupMember__Member Member：
+        %ul.GroupMember__List
+          %li masa
+          %li hoge
+    .Mainchat__GroupInfo__Edit
+      = link_to "Edit", "#", class: "Edit--btn" 
+
+  .Mainchat__MessageList
+  .Mainchat__MessageForm
