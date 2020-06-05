@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+@mixin userfont{
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .wrapper{
   display: flex;
 
@@ -22,8 +27,7 @@
         display: flex;
         justify-content: space-between;
         p.name{
-          font-size: 16px;
-          font-weight: bold;
+          @include userfont;
         }
         ul.icon{
           width: 60px;
@@ -42,7 +46,6 @@
     &__GroupList{
       height: calc(100% - 100px);
       background-color: #2f3e51;
-      // font-weight: bold;
       padding: 0 20px;
       &__Chat{
         padding: 20px 0 40px 0;
@@ -69,20 +72,22 @@
       justify-content: space-between;
       &__Group{
         padding: 35px 0 0 40px;
-        p.Group__name{
+        p.Groupname{
           color: #333333;
           font-size: 20px;
           margin-bottom: 15px;
         }
         &__GroupMember{
-          display: flex;
           color: #999999;
           font-size: 12px;
-          p.GroupMember__Member{
+          display: flex;
+          p.Member{
+            font-size: 12px;
           }
-          ul.GroupMember__List{
-            display: flex;
+          ul.MemberList{
+            font-size: 13px;
             list-style: none;
+            display: flex;
             li{
               margin-right: 5px;
             }
@@ -92,7 +97,6 @@
       &__Edit{
         padding: 28px 40px 0 0;
         a.Edit--btn{
-          display: block;
           width: 72px;
           height: 40px;
           line-height: 40px;
@@ -101,9 +105,9 @@
           color: #38aef0;
           border: 1px solid #38aef0; 
           text-decoration: none;
+          display: block;
         }
       }
-      
     }
     &__MessageList{
       height: calc(100% - 100px - 90px);
@@ -113,17 +117,17 @@
         &__User{
           display: flex;
           margin-bottom: 12px; 
-          p.User--name{
+          p.Username{
             color: #333333;
-            font-size: 16px;
+            @include userfont;
           }
-          p.User--timestamp{
+          p.Timestamp{
             color: #999999;
             font-size: 12px;
             padding-left: 10px; 
           }
         }
-        p.Chat--message{
+        p.Chatmessage{
           color: #434A54;
           font-size: 14px;
         }
@@ -134,13 +138,13 @@
       background-color: #d2d2d2;
       padding: 20px 50px 20px 40px;
       display: flex;
-      form.MessageForm__TextArea{
+      form.TextArea{
         border: none;
         height: 50px;
         width: 100%;
         display: flex;
         position: relative;
-        input.TextArea__message{
+        input.message{
           height: 100%;
           width: 100%;
           padding: 0 45px 0 15px;
@@ -148,7 +152,7 @@
           border-style: none;
           display: block;
         }
-        label.TextArea__image{
+        label.message--image{
           line-height: 50px;
           font-size: 25px;
           display: block;
@@ -167,7 +171,7 @@
         border: none;
         margin-left: 15px;
         padding: 0 30px;
-        a.Send--btn{
+        a.send--btn{
           color: #ffffff;
           text-decoration: none;
         }
