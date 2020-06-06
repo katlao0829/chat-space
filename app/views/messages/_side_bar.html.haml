@@ -1,13 +1,14 @@
 .Sidebar
   .Sidebar__User
     .Sidebar__User__TopItems
-      %p.name masa
+      %p.name
+        = current_user.name
       %ul.icon
         %li
         = link_to "#", class: "icon--btn" do
           = icon('fas', 'edit', class: "icon--btn--create")
-        %li
-        = link_to "#", class: "icon--btn" do
+        %li.icon--btn
+        = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: "icon--btn--edit")
 
   .Sidebar__GroupList
