@@ -12,9 +12,9 @@
           = icon('fas', 'cog', class: "icon--btn--edit")
 
   .Sidebar__GroupList
-    .Sidebar__GroupList__Chat
-      %p.name techcamp
-      %p.message まだメッセージがありません
-    .Sidebar__GroupList__Chat
-      %p.name techcamp
-      %p.message まだメッセージがありません
+    - current_user.groups.each do |group|
+      .Sidebar__GroupList__Chat
+        = link_to '#' do
+          .name
+            = group.name
+          %p.message まだメッセージがありません
