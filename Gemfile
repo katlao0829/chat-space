@@ -61,3 +61,6 @@ gem 'font-awesome-sass'
 
 # devise install
 gem 'devise'
+
+# デバック
+gem 'pry-rails'
