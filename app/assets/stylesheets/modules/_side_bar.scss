@@ -1,0 +1,54 @@
+.Sidebar{
+  width: 300px;
+  height: 100%;
+  color: $basewhite;
+  font-weight: bold;
+  &__User{
+    height: 100px;
+    background-color: $side-user;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__TopItems{
+      height: 20px;
+      width: 100%;
+      padding: 0px 20px;
+      display: flex;
+      justify-content: space-between;
+      p.name{
+        @include userfont;
+      }
+      ul.icon{
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
+        a{
+          margin-left: 5px;
+          text-decoration: none;
+          color: $basewhite;
+        }
+      }
+    }
+  }
+  &__GroupList{
+    height: calc(100vh - 100px);
+    background-color: $side-grouplist;
+    padding: 0 20px;
+    &__Chat{
+      padding: 20px 0 40px 0;
+      a{
+        text-decoration: none;
+        color: $basewhite;
+        .name{
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+        p.message{
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
