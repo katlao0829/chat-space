@@ -1,27 +1,24 @@
 .Mainchat
   .Mainchat__GroupInfo
     .Mainchat__GroupInfo__Group
-      %p.Groupname Test
+      %p.Groupname
+      = @group.name
       .Mainchat__GroupInfo__Group__GroupMember
         %p.Member Member：
         %ul.MemberList
-          %li masa
-          %li hoge
+          - @group.users.each do |user|
+            %li
+              = user.name
     .Mainchat__GroupInfo__Edit
-      = link_to "Edit", "groups_edit(groups.id)", class: "Edit--btn" 
+      = link_to "Edit", "/groups/#{@group.id}/edit", class: "Edit--btn"
 
   .Mainchat__MessageList
-    .Mainchat__MessageList__Chat
-      .Mainchat__MessageList__Chat__User
-        %p.Username masa
-        %p.Timestamp 2020/6/5(Fri) 10:00:00
-      %p.Chatmessage おはよう！
+    = render @messages
 
   .Mainchat__MessageForm
-    %form.TextArea
-      %input.message{type: "text", placeholder: "type a message"}
-      %label{class: "message--image"}
+    = form_with model: [@group, @message], html: {class: "MessageForm"}, local: true do |f|
+      = f.text_field :text, class: 'message', placeholder: 'type a message'
+      = f.label :image, class: "message--image" do
         = icon('fas', 'image')
-        %input{type: "file", class: "input--image"}
-    .Mainchat__MessageForm__Send
-      = link_to "Send", "#", class: "send--btn" 
+        = f.file_field :image, class: "input--image"
+      = f.submit 'Send', class: 'send--btn'

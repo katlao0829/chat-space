@@ -47,71 +47,47 @@
       }
     }
   }
-  &__MessageList{
-    height: calc(100% - 100px - 90px);
-    background-color: $main-background;
-    &__Chat{
-      padding: 35px 0 46px 40px;
-      &__User{
-        display: flex;
-        margin-bottom: 12px; 
-        p.Username{
-          color: $baseblack;
-          @include userfont;
-        }
-        p.Timestamp{
-          color: $basegray;
-          font-size: 12px;
-          padding-left: 10px; 
-        }
-      }
-      p.Chatmessage{
-        color: $main-chatmessage;
-        font-size: 14px;
-      }
-    }
-  }
+
   &__MessageForm{
     height: 90px;
+    width: 100%;
     background-color: $form-background;
+    overflow: hidden;
     padding: 20px 50px 20px 40px;
     display: flex;
-    form.TextArea{
+    .MessageForm{
       border: none;
       height: 50px;
       width: 100%;
       display: flex;
       position: relative;
-      input.message{
+      .message{
         height: 100%;
         width: 100%;
         padding: 0 45px 0 15px;
-        color: $basewhite;
+        color: $baseblack;
         border-style: none;
         display: block;
       }
-      label.message--image{
-        line-height: 50px;
-        font-size: 25px;
-        display: block;
-        position: absolute;
-        right: 10px;
-        input.input--image{
-          display: none;
-        }
+      .message--image{
+          line-height: 50px;
+          font-size: 25px;
+          display: block;
+          position: absolute;
+          right: 130px;
+          .input--image{
+            display: none;
+          }
       }
-    }
-    &__Send{
-      font-size: 16px;
-      height: 50px;
-      line-height: 50px;
-      background-color: $btn-color;
-      border: none;
-      margin-left: 15px;
-      padding: 0 30px;
-      a.send--btn{
+      .send--btn{
+        font-size: 16px;
+        height: 50px;
+        line-height: 50px;
+        background-color: $btn-color;
+        border: none;
+        margin-left: 15px;
+        padding: 0 30px;
         color: $basewhite;
-        text-decoration: none;
       }
     }
   }

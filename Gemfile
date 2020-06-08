@@ -64,3 +64,7 @@ gem 'devise'
 
 # デバック
 gem 'pry-rails'
+
+# carrierwave導入
+gem 'carrierwave'
+gem 'mini_magick'
