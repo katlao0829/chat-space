@@ -1,0 +1,28 @@
+.Mainchat__MessageList{
+  height: calc(100vh - 100px - 90px);
+  background-color: $main-background;
+  overflow: hidden;
+  &__Chat{
+    padding: 35px 0 46px 40px;
+    &__User{
+      display: flex;
+      margin-bottom: 12px; 
+      .Username{
+        color: $baseblack;
+        @include userfont;
+      }
+      .Timestamp{
+        color: $basegray;
+        font-size: 12px;
+        padding-left: 10px; 
+      }
+    }
+    .Chatmessage{
+      color: $main-chatmessage;
+      font-size: 14px;
+      .Message__image{
+        height: 300px;
+      }
+    }
+  }
+}
