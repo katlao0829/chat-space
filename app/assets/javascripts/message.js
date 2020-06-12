@@ -1,7 +1,6 @@
 $(function(){
   	
   function buildHTML(message){
-    // 「もしメッセージに画像が含まれていたら」という条件式
     if (message.image) {
       let html = `<div class="Mainchat__MessageList__Chat">
                     <div class="Mainchat__MessageList__Chat__User">
