@@ -2,6 +2,7 @@
   height: calc(100vh - 100px - 90px);
   background-color: $main-background;
   overflow: hidden;
+  overflow: scroll;
   &__Chat{
     padding: 35px 0 46px 40px;
     &__User{

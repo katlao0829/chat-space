@@ -73,3 +73,6 @@ gem 'pry-rails'
 # carrierwave導入
 gem 'carrierwave'
 gem 'mini_magick'
+
+# jQuery install 
+gem 'jquery-rails'
