@@ -76,3 +76,8 @@ gem 'mini_magick'
 
 # jQuery install 
 gem 'jquery-rails'
+
+# unicornインストール
+group :production do
+  gem 'unicorn', '5.4.1'
+end
