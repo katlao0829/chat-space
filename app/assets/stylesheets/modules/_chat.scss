@@ -21,9 +21,9 @@
     p{
       color: $main-chatmessage;
       font-size: 14px;
-      .Message__image{
-        height: 300px;
-      }
+    }
+    .Message__image{
+      height: 300px;
     }
   }
 }

@@ -56,6 +56,7 @@ $(function(){
     })
     .fail(function(){
       alert('error');
+      $('.send--btn').prop('disabled', false);
     })
   })
 });
