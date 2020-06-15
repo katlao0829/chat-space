@@ -77,6 +77,7 @@ gem 'pry-rails'
 
 # carrierwave導入
 gem 'carrierwave'
+gem 'fog-aws'
 gem 'mini_magick'
 
 # jQuery install 
