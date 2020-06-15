@@ -10,17 +10,18 @@
     justify-content: space-between;
     &__Group{
       padding: 35px 0 0 40px;
-      p.Groupname{
+      p{
         color: $baseblack;
         font-size: 20px;
-        margin-bottom: 15px;
       }
       &__GroupMember{
+        margin-top: 15px;
         color: $basegray;
         font-size: 12px;
         display: flex;
         p.Member{
           font-size: 12px;
+          color: $basegray;
         }
         ul.MemberList{
           font-size: 13px;
@@ -51,7 +52,7 @@
   &__MessageForm{
     height: 90px;
     width: 100%;
-    background-color: $form-background;
+    background-color: #dddddd;
     overflow: hidden;
     padding: 20px 50px 20px 40px;
     display: flex;

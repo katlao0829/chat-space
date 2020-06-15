@@ -4,7 +4,7 @@
   overflow: hidden;
   overflow: scroll;
   &__Chat{
-    padding: 35px 0 46px 40px;
+    padding: 35px 0 23px 40px;
     &__User{
       display: flex;
       margin-bottom: 12px; 
@@ -18,7 +18,7 @@
         padding-left: 10px; 
       }
     }
-    .Chatmessage{
+    p{
       color: $main-chatmessage;
       font-size: 14px;
       .Message__image{
